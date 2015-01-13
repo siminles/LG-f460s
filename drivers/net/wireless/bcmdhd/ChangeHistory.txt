@@ -1,0 +1,97 @@
+BCM43XX DHD 1.181.5.8 for PCIE
+
+DHD 1.181.5 (Apr-25-2014)
+  - Initial release
+
+
+DHD 1.181.5.1 (Apr-26-2014)
+  - Fixed Wi-Fi on/off problem.
+  - Enabled PM feature.
+
+
+DHD 1.181.5.2 (Apr-30-2014)
+  - Fixed Wi-Fi on/off failure after suspend/resume.
+
+
+DHD 1.181.5.3 (May-1-2014)
+  - Fixed wake_lock unlocking problem.
+
+
+DHD 1.181.5.4 (May-5-2014)
+  - Modified suspend routine not to hold wake lock.
+
+
+DHD 1.181.5.5 (May-10-2014)
+  - Implemented REG_ON deassertion during system boot.
+  - Modified irq routine not to hold duplicated wake lock.
+  - Fixed Wi-Fi on failure due to wrong configuration data[CSP#793746].
+  - Applied WAR for kernel panic during Wi-Fi on/off test[CSP#791382].
+  - Merged LGE specific changes which have been applied to 1.88 DHD[CSP#791629].
+
+
+DHD 1.181.5.6 (May-15-2014)
+  - Released for BRCM Internal SVT.
+  - Fixed kerenl panic during flowring allocation.
+  - Implemented reboot notifier.
+  - Added pci_set_master function while enabling network interface.
+  - Removed pending scan timer during network interface down.
+
+
+DHD 1.181.5.7 (May-16-2014)
+  - Disable tasklet while interface goes down[CSP#791382].
+  - Fixed SYS NOC error[CSP#795057].
+  - Implemented static memory allocation feature[CSP#794075].
+
+
+DHD 1.181.5.8 (May-23-2014)
+  - Added unlocking of sdlock when flow ring allocation failed[CSP#796583]
+  - Disable WLC_E_TRACE event and added sleep routine in event handler[CSP#797821,CSP#795723]
+  - Reduced latency of DMA read index update in case of RX completion[CSP#794486]
+  - Added bus state check routine in irq enable and disable[CSP#796912]
+  - Initialized Hang related variable[CSP#797821]
+  - Changed PCI configuration store position[CSP#796939]
+  - Fixed no internet connection problem[CSP#794486]
+  - Fixed watchdog problem during Wi-Fi off[CSP#797821]
+  - Added 4356 PID check routine in PCIE probe function
+
+DHD 1.181.5.9 (May-31-2014)
+  - Applied ASPM/L1ss configuration in DHD
+  - Delayed Tx packet on suspend
+  - Delayed processing interrupt during system's waking up
+  - Protocol clear on HANG
+  - Fast response to dongle for received data and control packets
+  
+
+DHD 1.181.5.10 (May-31-2014)
+  - Fixed kernel warning during skb free
+  - Fixed memory poisoning on rebooting [CSP#801441]
+  - Fixed to disable interrupt after WiFi's turning on failure [CSP#801403]
+  - Fixed WiFi on failure during boot time with BT on [CSP#802895]
+  - Decreased ioctl timeout to 2sec on entering D3 [CSP#803791]
+  - Removed features for SDIO only on PCIe
+  - Applied ASPM/L1ss configuration on D0 transition
+  
+
+DHD 1.181.5.11 (Jun-13-2014)
+  - Fixed assert [CSP#804780]
+  - Applied doorbell interrupt
+  - Fixed GAS comback delay issue
+  - Modified not to fix "PM 0" during miracast
+  - Fixed null pointer problem of wdev after removed p2p_disc_if.
+  - Fixed Passpoint issue
+  - Added RC0 link down recovery [CSP#804602]
+  - Fixed DPM device timeout [CSP#796102]
+  - Fixed PNO crash issue due to null pointer.
+  - Fixed shared memory read issue
+  - Changed wakelock_rx_timeout from 500ms to 1sec
+   
+
+DHD 1.181.5.12 (Jun-25-2014)
+  - Patched memory corruption [CSP#808285]
+    This patch needs FW 7.35.58.1 or newer. It's released on Docsafe.
+  - Patched DPM timeout [CSP#796102]
+
+  
+DHD 1.181.5.13 (Jun-30-2014)
+  - Added supporting PME interrupt
+  - Added AP power save
